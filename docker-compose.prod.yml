@@ -1,0 +1,12 @@
+version: '3.7'
+
+services: 
+    api:
+        container_name: api
+        image: php:7.4-fpm
+        volumes: 
+            - ./:/src
+        command: /src/install_prod.sh
+        ports:
+            - 8009:8009
+        restart: always
